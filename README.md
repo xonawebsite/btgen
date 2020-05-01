@@ -4,7 +4,9 @@ The web development boilerplate CLI generator tool.
 # Install
 To install you need to have already installed <a href="https://nodejs.org/">nodejs</a> & npm.
 
-With that, just run <code>$ npm install -g btgen</code>.
+With that, just run this:
+
+<code>$ npm install -g btgen</code>
 
 That's it!
 
@@ -12,18 +14,18 @@ That's it!
 Right now, the tool has only 1 generator active, webpage, this one generate a blank project space with the following struture:
 
 <pre>
-	<code>
-		<PROJECT_NAME>
-		|--- css
-			|--- master.css
-		|--- js
-			|--- vendor
-				|--- jquery-3.5.0.js
-				|--- jquery-3.5.0.min.js
-			|--- main.js
-		|--- images
-		|--- index.html
-	</code>
+<code>
+<PROJECT_NAME>
+|--- css
+	|--- master.css
+|--- js
+	|--- vendor
+		|--- jquery-3.5.0.js
+		|--- jquery-3.5.0.min.js
+	|--- main.js
+|--- images
+|--- index.html
+</code>
 </pre>
 
 For generate a webpage template just run this:
