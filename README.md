@@ -15,16 +15,16 @@ Right now, the tool has only 1 generator active, webpage, this one generate a bl
 
 <pre>
 <code>
-<PROJECT_NAME>
-|--- css
-	|--- master.css
-|--- js
-	|--- vendor
-		|--- jquery-3.5.0.js
-		|--- jquery-3.5.0.min.js
-	|--- main.js
-|--- images
-|--- index.html
+|--- PROJECT_NAME
+	|--- css
+		|--- master.css
+	|--- js
+		|--- vendor
+			|--- jquery-3.5.0.js
+			|--- jquery-3.5.0.min.js
+		|--- main.js
+	|--- images
+	|--- index.html
 </code>
 </pre>
 
