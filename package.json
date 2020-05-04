@@ -1,6 +1,6 @@
 {
   "name": "btgen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Web development boilerplate CLI generator tool.",
   "main": "index.js",
   "bin": {
@@ -15,20 +15,23 @@
   },
   "keywords": [
     "boilerplate",
+    "web design",
     "web development",
     "template",
     "html5",
     "css",
     "javascript",
+    "web game",
     "bootstrap",
     "jquery",
     "vue",
-    "react"
+    "react",
+    "generator"
   ],
   "author": "kenliten",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/kenliten/btgen/issues"
   },
-  "homepage": "https://github.com/kenliten/btgen#readme"
+  "homepage": "https://kenliten.github.io/btgen/"
 }
