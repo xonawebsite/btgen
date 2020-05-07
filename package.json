@@ -1,7 +1,7 @@
 {
   "name": "btgen",
-  "version": "0.0.2",
-  "description": "Web development boilerplate CLI generator tool.",
+  "version": "0.0.3",
+  "description": "The web development boilerplate CLI generator tool.",
   "main": "index.js",
   "bin": {
     "btgen": "index.js"
@@ -25,6 +25,7 @@
     "bootstrap",
     "jquery",
     "vue",
+    "game design document",
     "react",
     "generator"
   ],
