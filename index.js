@@ -82,17 +82,17 @@ if (process.argv[2]){
 		case "webgame": {
 			if (process.argv[3]){
 				// generate the webpage
-				let tree = tp.btwebpageTree;
+				let tree = tp.webgameTree;
 				let project = process.argv[3];
 				fs.mkdirSync(`./${project}`);
 				for (i = 0; i < tree.length; i++){
 					fs.mkdirSync(tree[i]);
 				}
 				console.log(`Project tree successfully created!`);
-				fs.writeFile(`./${project}/index.html`, tp.bootstrapHtml, (err)=>{
+				fs.writeFile(`./${project}/index.html`, tp.gameBaseHTML, (err)=>{
 					if (err) throw err;
 				});
-				fs.writeFile(`./${project}/404.html`, tp._404Page, (err)=>{
+				fs.writeFile(`./${project}/GDD.md`, tp.simpleGDD, (err)=>{
 					if (err) throw err;
 				});
 				fs.writeFile(`./${project}/robots.txt`, tp.robotsTXT, (err)=>{
@@ -101,18 +101,36 @@ if (process.argv[2]){
 				fs.writeFile(`./${project}/humans.txt`, tp.humansTXT, (err)=>{
 					if (err) throw err;
 				});
-				fs.writeFile(`${project}/css/master.css`, tp.simpleCSS, (err)=>{
+				fs.writeFile(`${project}/css/master.css`, tp.gameBaseCSS, (err)=>{
 					if (err) throw err;
 				});
-				fs.writeFile(`${project}/js/main.js`, tp.simpleJS, (err)=>{
+				fs.writeFile(`${project}/js/game.js`, tp.gameBaseJS, (err)=>{
 					if (err) throw err;
 				});
-				tp.BootstrapJS(`${project}/js/vendor`);
-				tp.Bootstrap(`${project}/css/vendor`);
+				fs.writeFile(`${project}/js/devTools.js`, tp.gameDevToolsJS, (err)=>{
+					if (err) throw err;
+				});
+				tp.gameBaseMusic(`${project}/assets/audio`);
 				console.log(`Files successfully created!`);
 				console.log(`Project ${project} ready to work on!`);
 				break;
 			}
+		}
+		case '-help':{
+			help.printHelp();
+			break;
+		}
+		case '--help':{
+			help.printHelp();
+			break;
+		}
+		case 'help':{
+			help.printHelp();
+			break;
+		}
+		case 'h':{
+			help.printHelp();
+			break;
 		}
 		default:{
 			console.log("*** Argument missed ***");
