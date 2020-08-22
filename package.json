@@ -7,7 +7,10 @@
     "btgen": "index.js"
   },
   "scripts": {
-    "test:webpage": "btgen webpage test && rm -r test"
+    "test:webpage": "node index.js webpage test && rm -r test",
+    "test:bootstrap": "node index.js bootstrap test && rm -r test",
+    "test:webgame": "node index.js webgame test && rm -r test",
+    "test:vuepage": "node index.js vuepage test && rm -r test"
   },
   "repository": {
     "type": "git",

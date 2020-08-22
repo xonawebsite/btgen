@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const help = require('./lib/help.js');
-const templates = require('./lib/templates.js');
 const process = require('process');
 const fs = require('fs');
 const https = require('https')
@@ -11,93 +10,96 @@ if (process.argv[2]){
 		case "webpage": {
 			if (process.argv[3]){
 				// generate the webpage
-				let webpage = require('./lib/webpage.js');
+				let webpage = require('./lib/templates/webpage.js');
 				let tree = webpage.tree;
 
 				let projectName = process.argv[3];
-				
+
 				fs.mkdirSync(`./${projectName}`);
+
 				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(projectName+tree[i]);
+					fs.mkdirSync(projectName + tree[i]);
 				}
+
 				console.log(`Folder tree successfully created!`);
 
-				webpage.createFiles();
+				webpage.createFiles(projectName);
 
 				console.log(`Files successfully created!`);
-				console.log(`Project ${projectName} ready to work on!`);
+				console.log(`Project ${projectName} is ready, happy coding!`);
+
 				break;
 			}
 		}
 		case "bootstrap": {
 			if (process.argv[3]){
 				// generate the webpage
-				let tree = tp.btwebpageTree;
-				let project = process.argv[3];
-				fs.mkdirSync(`./${project}`);
+				let bootstrap = require('./lib/templates/bootstrap.js');
+				let tree = bootstrap.tree;
+
+				let projectName = process.argv[3];
+
+				fs.mkdirSync(`./${projectName}`);
+
 				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(tree[i]);
+					fs.mkdirSync(projectName + tree[i]);
 				}
+
 				console.log(`Project tree successfully created!`);
-				fs.writeFile(`./${project}/index.html`, tp.bootstrapHtml, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`./${project}/404.html`, tp._404Page, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`./${project}/robots.txt`, tp.robotsTXT, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`./${project}/humans.txt`, tp.humansTXT, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`${project}/css/master.css`, tp.simpleCSS, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`${project}/js/main.js`, tp.simpleJS, (err)=>{
-					if (err) throw err;
-				});
-				tp.BootstrapJS(`${project}/js/vendor`);
-				tp.Bootstrap(`${project}/css/vendor`);
+
+				bootstrap.createFiles(projectName);
+
 				console.log(`Files successfully created!`);
-				console.log(`Project ${project} ready to work on!`);
+				console.log(`Project ${projectName} is ready, happy coding!`);
+
 				break;
 			}
 		}
 		case "webgame": {
 			if (process.argv[3]){
 				// generate the webpage
-				let tree = tp.webgameTree;
-				let project = process.argv[3];
-				fs.mkdirSync(`./${project}`);
+				let webgame = require('./lib/templates/webgame.js');
+				let tree = webgame.tree;
+
+				let projectName = process.argv[3];
+
+				fs.mkdirSync(`./${projectName}`);
+
 				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(tree[i]);
+					fs.mkdirSync(projectName + tree[i]);
 				}
+
 				console.log(`Project tree successfully created!`);
-				fs.writeFile(`./${project}/index.html`, tp.gameBaseHTML, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`./${project}/GDD.md`, tp.simpleGDD, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`./${project}/robots.txt`, tp.robotsTXT, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`./${project}/humans.txt`, tp.humansTXT, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`${project}/css/master.css`, tp.gameBaseCSS, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`${project}/js/game.js`, tp.gameBaseJS, (err)=>{
-					if (err) throw err;
-				});
-				fs.writeFile(`${project}/js/devTools.js`, tp.gameDevToolsJS, (err)=>{
-					if (err) throw err;
-				});
-				tp.gameBaseMusic(`${project}/assets/audio`);
+
+				webgame.createFiles(projectName);
+
 				console.log(`Files successfully created!`);
-				console.log(`Project ${project} ready to work on!`);
+				console.log(`Project ${projectName} is ready, happy coding!`);
+
+				break;
+			}
+		}
+		case "vuepage":{
+			if (process.argv[3]){
+				// generate the webpage
+				let vuepage = require('./lib/templates/vuepage.js');
+				let tree = vuepage.tree;
+
+				let projectName = process.argv[3];
+
+				fs.mkdirSync(`./${projectName}`);
+
+				for (i = 0; i < tree.length; i++){
+					fs.mkdirSync(projectName + tree[i]);
+				}
+
+				console.log(`Project tree successfully created!`);
+
+				vuepage.createFiles(projectName);
+
+				console.log(`Files successfully created!`);
+				console.log(`Project ${projectName} is ready, happy coding!`);
+
 				break;
 			}
 		}
@@ -110,6 +112,10 @@ if (process.argv[2]){
 			break;
 		}
 		case 'help':{
+			help.printHelp();
+			break;
+		}
+		case '-h':{
 			help.printHelp();
 			break;
 		}

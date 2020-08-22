@@ -29,6 +29,7 @@ To use the CLI just type the following:
 	<li>webpage: <br><small>create a simple structured html/css/js page</small></li>
 	<li>bootstrap: <br><small>create a simple bootstrap powered html5 project</small></li>
 	<li>webgame: <br><small>create a simple HTML5 + JS game featured with a simple game loop and the basic variables to work with</small></li>
+	<li>vuepage: <br><small>create a simple webpage vue's powered</small></li>
 </ul>
 
 # TODO
@@ -37,7 +38,7 @@ To use the CLI just type the following:
 	<li style="text-decoration: line-through;">Add webpage template</li>
 	<li style="text-decoration: line-through;">Add bootstrap template</li>
 	<li style="text-decoration: line-through;">Add webgame template</li>
-	<li>Add vuepage template</li>
+	<li style="text-decoration: line-through;">Add vuepage template</li>
 	<li>Add vueapp template</li>
 	<li>Add vuespa template</li>
 	<li>Add phppage template</li>
