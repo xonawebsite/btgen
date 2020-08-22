@@ -1,4 +1,5 @@
-# btgen
+<img src="./logo.png">
+# BTGen v0.1.0
 The web development boilerplate CLI generator tool.
 
 # Install
