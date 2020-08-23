@@ -103,6 +103,30 @@ if (process.argv[2]){
 				break;
 			}
 		}
+		case "reactpage":{
+			if (process.argv[3]){
+				// generate the webpage
+				let reactpage = require('./lib/templates/reactpage.js');
+				let tree = reactpage.tree;
+
+				let projectName = process.argv[3];
+
+				fs.mkdirSync(`./${projectName}`);
+
+				for (i = 0; i < tree.length; i++){
+					fs.mkdirSync(projectName + tree[i]);
+				}
+
+				console.log(`Project tree successfully created!`);
+
+				reactpage.createFiles(projectName);
+
+				console.log(`Files successfully created!`);
+				console.log(`Project ${projectName} is ready, happy coding!`);
+
+				break;
+			}
+		}
 		case '-help':{
 			help.printHelp();
 			break;

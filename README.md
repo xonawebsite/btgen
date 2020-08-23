@@ -1,4 +1,4 @@
-<img src="./logo.png">
+<img src="./logo.png" style="width: 265px; height: auto; display: block; margin: 0 auto;">
 # BTGen v0.1.0
 The web development boilerplate CLI generator tool.
 
@@ -40,10 +40,19 @@ To use the CLI just type the following:
 	<li style="text-decoration: line-through;">Add bootstrap template</li>
 	<li style="text-decoration: line-through;">Add webgame template</li>
 	<li style="text-decoration: line-through;">Add vuepage template</li>
+	<li style="text-decoration: line-through;">Add reactpage template</li>
+	<li style="text-decoration: line-through;">Add nodeapp template</li>
+	<li>Add nodemvc template</li>
+	<li>Add mevn template</li>
+	<li>Add mern template</li>
+	<li>Add mean template</li>
 	<li>Add vueapp template</li>
 	<li>Add vuespa template</li>
 	<li>Add phppage template</li>
 	<li>Add phpapp template</li>
+	<li>Add chrext template</li>
+	<li>Add firext template</li>
+	<li>Add reactapp template</li>
 	<li>Add spanish support</li>
 </ul>
 
