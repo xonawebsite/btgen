@@ -41,7 +41,7 @@ To use the CLI just type the following:
 	<li style="text-decoration: line-through;">Add webgame template</li>
 	<li style="text-decoration: line-through;">Add vuepage template</li>
 	<li style="text-decoration: line-through;">Add reactpage template</li>
-	<li style="text-decoration: line-through;">Add nodeapp template</li>
+	<li style="text-decoration: line-through;">Add expressapp template</li>
 	<li>Add nodemvc template</li>
 	<li>Add mevn template</li>
 	<li>Add mern template</li>

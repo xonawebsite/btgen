@@ -1,6 +1,6 @@
 {
   "name": "btgen",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The web development boilerplate CLI generator tool.",
   "main": "index.js",
   "bin": {
@@ -11,7 +11,8 @@
     "test:bootstrap": "node index.js bootstrap test && rm -r test",
     "test:webgame": "node index.js webgame test && rm -r test",
     "test:vuepage": "node index.js vuepage test && rm -r test",
-    "test:reactpage": "node index.js reactpage test && rm -r test"
+    "test:reactpage": "node index.js reactpage test && rm -r test",
+    "test:expressapp": "node index.js expressapp test && rm -r test"
   },
   "repository": {
     "type": "git",
