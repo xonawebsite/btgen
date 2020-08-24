@@ -1,5 +1,5 @@
-<img src="./logo.png" style="width: 265px; height: auto; display: block; margin: 0 auto;">
-# BTGen v0.1.0
+<img src="./logo.png" style="width: 256px; height: auto; display: block; margin: 0 auto;">
+# BTGen v0.1.2
 The web development boilerplate CLI generator tool.
 
 # Install
@@ -31,17 +31,13 @@ To use the CLI just type the following:
 	<li>bootstrap: <br><small>create a simple bootstrap powered html5 project</small></li>
 	<li>webgame: <br><small>create a simple HTML5 + JS game featured with a simple game loop and the basic variables to work with</small></li>
 	<li>vuepage: <br><small>create a simple webpage vue's powered</small></li>
+	<li>reactpage: <br><small>create a simple webpage react's powered</small></li>
+	<li>expressapp: <br><small>create a simple express application</small></li>
 </ul>
 
 # TODO
 
 <ul>
-	<li style="text-decoration: line-through;">Add webpage template</li>
-	<li style="text-decoration: line-through;">Add bootstrap template</li>
-	<li style="text-decoration: line-through;">Add webgame template</li>
-	<li style="text-decoration: line-through;">Add vuepage template</li>
-	<li style="text-decoration: line-through;">Add reactpage template</li>
-	<li style="text-decoration: line-through;">Add expressapp template</li>
 	<li>Add nodemvc template</li>
 	<li>Add mevn template</li>
 	<li>Add mern template</li>
