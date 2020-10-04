@@ -1,52 +1,65 @@
-<img src="./logo.png" style="width: 256px; height: auto; display: block; margin: 0 auto;">
 # BTGen v0.1.2
+
+![Btgen Logo](logo.png)
+
 The web development boilerplate CLI generator tool.
 
-# Install
+## Install
+---
+
 To install you need to have already installed <a href="https://nodejs.org/">nodejs</a> & npm.
 
 With that, just run this:
 
-<code>$ npm install -g btgen</code>
+```sh
+$ npm install -g btgen
+```
 
 That's it!
 
 Also you can install it locally following these simple steps:
 
-<ol>
-	<li>Clone this repository with: <br><code>$ git clone https://github.com/kenliten/btgen.git</code></li>
-	<li>Go to the folder: <br><code>$ cd btgen</code></li>
-	<li>Link it to your environment with: <br><code>$ npm link</code></li>
-</ol>
+1. Clone this repository with:
+```sh
+$ git clone https://github.com/kenliten/btgen.git
+```
+2. Go to the folder:
+```sh
+$ cd btgen
+```
+3. Link it to your environment with: 
+```sh
+$ npm link
+```
 
-# Use
+## Use
+---
+
 To use the CLI just type the following:
 
-<code>$ btgen &lt;template&gt; &lt;project_name&gt;</code>
+```sh
+$ btgen <template> <project_name>
+```
 
-<h3>Templates</h3>
+More info in the [official documentation](https://kenliten/github.io/btgen-doc).
 
-More info in the [official documentation]('https://kenliten/github.io/btgen-doc').
+## TODO
+---
 
-# TODO
+- Add nodemvc template
+- Add mevn template
+- Add mern template
+- Add mean template
+- Add vueapp template
+- Add vuespa template
+- Add phppage template
+- Add phpapp template
+- Add chrext template
+- Add firext template
+- Add reactapp template
+- Add spanish support
 
-<ul>
-	<li>Add nodemvc template</li>
-	<li>Add mevn template</li>
-	<li>Add mern template</li>
-	<li>Add mean template</li>
-	<li>Add vueapp template</li>
-	<li>Add vuespa template</li>
-	<li>Add phppage template</li>
-	<li>Add phpapp template</li>
-	<li>Add chrext template</li>
-	<li>Add firext template</li>
-	<li>Add reactapp template</li>
-	<li>Add spanish support</li>
-</ul>
+## Suggestions & Feedback
 
-# Suggestions & Feedback
+If you want a template that is not listed here, or maybe want to feedback, you can mail me to <otonielreyesgalay@gmail.com>.
 
-<p>
-	If you want a template that is not listed here, or maybe want to feedback, you can mail me to <a href="mailto:otonielreyesgalay@gmail.com">otonielreyesgalay@gmail.com</a>.
-</p>
