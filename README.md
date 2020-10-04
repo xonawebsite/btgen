@@ -26,14 +26,7 @@ To use the CLI just type the following:
 
 <h3>Templates</h3>
 
-<ul>
-	<li>webpage: <br><small>create a simple structured html/css/js page</small></li>
-	<li>bootstrap: <br><small>create a simple bootstrap powered html5 project</small></li>
-	<li>webgame: <br><small>create a simple HTML5 + JS game featured with a simple game loop and the basic variables to work with</small></li>
-	<li>vuepage: <br><small>create a simple webpage vue's powered</small></li>
-	<li>reactpage: <br><small>create a simple webpage react's powered</small></li>
-	<li>expressapp: <br><small>create a simple express application</small></li>
-</ul>
+More info in the [official documentation]('https://kenliten/github.io/btgen-doc').
 
 # TODO
 
