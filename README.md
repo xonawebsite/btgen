@@ -1,6 +1,6 @@
-# BTGen v0.1.2
-
 ![Btgen Logo](logo.png)
+
+# BTGen v0.1.2
 
 The web development boilerplate CLI generator tool.
 
@@ -41,7 +41,7 @@ To use the CLI just type the following:
 $ btgen <template> <project_name>
 ```
 
-More info in the [official documentation](https://kenliten/github.io/btgen-doc).
+More info in the [official documentation](https://kenliten/github.io/btgen-doc/).
 
 ## TODO
 ---
