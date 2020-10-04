@@ -41,7 +41,7 @@ To use the CLI just type the following:
 $ btgen <template> <project_name>
 ```
 
-More info in the [official documentation](https://kenliten/github.io/btgen-doc/).
+More info in the [official documentation](https://kenliten.github.io/btgen-doc/).
 
 ## TODO
 ---
