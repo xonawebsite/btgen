@@ -4,8 +4,8 @@ const help = require('./lib/help.js')
 const process = require('process')
 const fs = require('fs')
 
-const options = process.argv.filter(function(comm, index){
-	return index > 2;
+const options = process.argv.filter(function(comm){
+	return comm.startsWith('--') || comm.startsWith('-');
 });
 
 var ready = false;
@@ -41,7 +41,7 @@ if (process.argv[2]){
 					}
 					break;
 				}
-				let tree = options.includes('no-ed') ? 
+				let tree = options.includes('--no-ed') ? 
 					webpage.filledTree : 
 					webpage.tree;
 
@@ -53,8 +53,9 @@ if (process.argv[2]){
 					break;
 				}
 
-				webpage.createFiles(projectName, options);
-				ready = true;
+				if (webpage.createFiles(projectName, options)){
+					ready = true;
+				}
 				break;
 			}
 		}
@@ -70,7 +71,7 @@ if (process.argv[2]){
 					}
 					break;
 				}
-				let tree = options.includes('no-ed') ? 
+				let tree = options.includes('--no-ed') ? 
 					bootstrap.filledTree : 
 					bootstrap.tree;
 
@@ -82,8 +83,9 @@ if (process.argv[2]){
 					break;
 				}
 
-				bootstrap.createFiles(projectName, options);
-				ready = true;
+				if (bootstrap.createFiles(projectName, options)){
+					ready = true;
+				}
 				break;
 			}
 		}
@@ -99,7 +101,7 @@ if (process.argv[2]){
 					}
 					break;
 				}
-				let tree = options.includes('no-ed') ? 
+				let tree = options.includes('--no-ed') ? 
 					webgame.filledTree : 
 					webgame.tree;
 
@@ -111,8 +113,9 @@ if (process.argv[2]){
 					break;
 				}
 
-				webgame.createFiles(projectName, options);
-				ready = true;
+				if (webgame.createFiles(projectName, options)){
+					ready = true;
+				}
 				break;
 			}
 		}
@@ -128,7 +131,7 @@ if (process.argv[2]){
 					}
 					break;
 				}
-				let tree = options.includes('no-ed') ? 
+				let tree = options.includes('--no-ed') ? 
 					vuepage.filledTree : 
 					vuepage.tree;
 
@@ -140,8 +143,9 @@ if (process.argv[2]){
 					break;
 				}
 
-				vuepage.createFiles(projectName, options);
-				ready = true;
+				if (vuepage.createFiles(projectName, options)){
+					ready = true;
+				}
 				break;
 			}
 		}
@@ -157,7 +161,7 @@ if (process.argv[2]){
 					}
 					break;
 				}
-				let tree = options.includes('no-ed') ? 
+				let tree = options.includes('--no-ed') ? 
 					reactpage.filledTree : 
 					reactpage.tree;
 
@@ -169,8 +173,9 @@ if (process.argv[2]){
 					break;
 				}
 
-				reactpage.createFiles(projectName, options);
-				ready = true;
+				if (reactpage.createFiles(projectName, options)){
+					ready = true;
+				}
 				break;
 			}
 		}
@@ -186,7 +191,7 @@ if (process.argv[2]){
 					}
 					break;
 				}
-				let tree = options.includes('no-ed') ? 
+				let tree = options.includes('--no-ed') ? 
 					expressApp.filledTree : 
 					expressApp.tree;
 
@@ -198,21 +203,23 @@ if (process.argv[2]){
 					break;
 				}
 
-				expressApp.createFiles(projectName, options);
-				ready = true;
+				if (expressApp.createFiles(projectName, options)){
+					ready = true;
+				}
 				break;
 			}
 		}
-		case '-help':
-		case '--help':
-		case 'help':
 		case 'h':
-		case '-h': {
+		case '-h':
+		case 'help':
+		case '-help':
+		case '--help':{
 			help.printHelp();
 			break;
 		}
 		case 'v':
 		case '-v':
+		case 'version':
 		case '-version':
 		case '--version': {
 			console.log("BTGen v0.1.4                by @kenliten");
@@ -220,6 +227,7 @@ if (process.argv[2]){
 		}
 		case 'c':
 		case '-c':
+		case 'changes':
 		case '-changes':
 		case '--changes': {
 			if (options.includes('v')){
@@ -243,5 +251,5 @@ if (process.argv[2]){
 
 if (ready) {
 	console.log(`Project ${projectName} is ready!`);
-	console.log(`Just wait to files to be downloaded.`);
+	console.log(`Happy coding!`);
 }
