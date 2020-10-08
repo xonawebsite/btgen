@@ -8,167 +8,198 @@ const options = process.argv.filter(function(comm, index){
 	return index > 2;
 });
 
+var ready = false;
+var projectName = '';
+
+function createRootFolder(projectName, tree){
+	try {
+		fs.mkdirSync(`./${projectName}`);
+		console.log("Created " + projectName);
+	} catch (err) {
+		console.log('Error trying to create the ' + projectName + ' folder');
+		console.log("Ensure there's no folder named " + projectName);
+		return false;
+	}
+	for (i = 0; i < tree.length; i++) {
+		fs.mkdirSync(projectName + tree[i]);
+		console.log("Created " + projectName + tree[i]);
+	}
+	return true;
+}
+
 if (process.argv[2]){
 	switch (process.argv[2]){
 		case "web":
 		case "webpage": {
 			if (process.argv[3]){
-				// generate the webpage
 				let webpage = require('./lib/templates/webpage.js');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						webpage.help(true);
+					}else{
+						webpage.help();
+					}
+					break;
+				}
 				let tree = options.includes('no-ed') ? 
 					webpage.filledTree : 
 					webpage.tree;
 
-				let projectName = process.argv[3];
-
-				fs.mkdirSync(`./${projectName}`);
-
-				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(projectName + tree[i]);
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Folder tree successfully created!`);
+				}else{
+					break;
 				}
 
-				console.log(`Folder tree successfully created!`);
-
 				webpage.createFiles(projectName, options);
-
-				console.log(`Files successfully created!`);
-				console.log(`Project ${projectName} is ready, happy coding!`);
-
+				ready = true;
 				break;
 			}
 		}
 		case "bt":
 		case "bootstrap": {
 			if (process.argv[3]){
-				// generate the webpage
 				let bootstrap = require('./lib/templates/bootstrap.js');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						bootstrap.help(true);
+					}else{
+						bootstrap.help();
+					}
+					break;
+				}
 				let tree = options.includes('no-ed') ? 
 					bootstrap.filledTree : 
 					bootstrap.tree;
 
-				let projectName = process.argv[3];
-
-				fs.mkdirSync(`./${projectName}`);
-
-				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(projectName + tree[i]);
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Project tree successfully created!`);
+				}else{
+					break;
 				}
 
-				console.log(`Project tree successfully created!`);
-
 				bootstrap.createFiles(projectName, options);
-
-				console.log(`Files successfully created!`);
-				console.log(`Project ${projectName} is ready, happy coding!`);
-
+				ready = true;
 				break;
 			}
 		}
 		case "game":
 		case "webgame": {
 			if (process.argv[3]){
-				// generate the webpage
 				let webgame = require('./lib/templates/webgame.js');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						webgame.help(true);
+					}else{
+						webgame.help();
+					}
+					break;
+				}
 				let tree = options.includes('no-ed') ? 
 					webgame.filledTree : 
 					webgame.tree;
 
-				let projectName = process.argv[3];
-
-				fs.mkdirSync(`./${projectName}`);
-
-				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(projectName + tree[i]);
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Project tree successfully created!`);
+				}else{
+					break;
 				}
 
-				console.log(`Project tree successfully created!`);
-
 				webgame.createFiles(projectName, options);
-
-				console.log(`Files successfully created!`);
-				console.log(`Project ${projectName} is ready, happy coding!`);
-
+				ready = true;
 				break;
 			}
 		}
 		case "vue":
-		case "vuepage":{
+		case "vuepage": {
 			if (process.argv[3]){
-				// generate the webpage
 				let vuepage = require('./lib/templates/vuepage.js');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						vuepage.help(true);
+					}else{
+						vuepage.help();
+					}
+					break;
+				}
 				let tree = options.includes('no-ed') ? 
 					vuepage.filledTree : 
 					vuepage.tree;
 
-				let projectName = process.argv[3];
-
-				fs.mkdirSync(`./${projectName}`);
-
-				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(projectName + tree[i]);
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Project tree successfully created!`);
+				}else{
+					break;
 				}
 
-				console.log(`Project tree successfully created!`);
-
 				vuepage.createFiles(projectName, options);
-
-				console.log(`Files successfully created!`);
-				console.log(`Project ${projectName} is ready, happy coding!`);
-
+				ready = true;
 				break;
 			}
 		}
 		case "react":
 		case "reactpage": {
 			if (process.argv[3]){
-				// generate the webpage
 				let reactpage = require('./lib/templates/reactpage.js');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						reactpage.help(true);
+					}else{
+						reactpage.help();
+					}
+					break;
+				}
 				let tree = options.includes('no-ed') ? 
 					reactpage.filledTree : 
 					reactpage.tree;
 
-				let projectName = process.argv[3];
-
-				fs.mkdirSync(`./${projectName}`);
-
-				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(projectName + tree[i]);
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Project tree successfully created!`);
+				}else{
+					break;
 				}
 
-				console.log(`Project tree successfully created!`);
-
 				reactpage.createFiles(projectName, options);
-
-				console.log(`Files successfully created!`);
-				console.log(`Project ${projectName} is ready, happy coding!`);
-
+				ready = true;
 				break;
 			}
 		}
 		case "express":
 		case "expressapp": {
 			if (process.argv[3]){
-				// generate the webpage
 				let expressApp = require('./lib/templates/expressapp.js');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						expressApp.help(true);
+					}else{
+						expressApp.help();
+					}
+					break;
+				}
 				let tree = options.includes('no-ed') ? 
 					expressApp.filledTree : 
 					expressApp.tree;
 
-				let projectName = process.argv[3];
-
-				fs.mkdirSync(`./${projectName}`);
-
-				for (i = 0; i < tree.length; i++){
-					fs.mkdirSync(projectName + tree[i]);
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Project tree successfully created!`);
+				}else{
+					break;
 				}
 
-				console.log(`Project tree successfully created!`);
-
 				expressApp.createFiles(projectName, options);
-
-				console.log(`Files successfully created!`);
-				console.log(`Project ${projectName} is ready, happy coding!`);
-
+				ready = true;
 				break;
 			}
 		}
@@ -176,21 +207,21 @@ if (process.argv[2]){
 		case '--help':
 		case 'help':
 		case 'h':
-		case '-h':{
+		case '-h': {
 			help.printHelp();
 			break;
 		}
 		case 'v':
 		case '-v':
 		case '-version':
-		case '--version':{
+		case '--version': {
 			console.log("BTGen v0.1.4                by @kenliten");
 			break;
 		}
 		case 'c':
 		case '-c':
 		case '-changes':
-		case '--changes':{
+		case '--changes': {
 			if (options.includes('v')){
 				help.printChanges(true);
 			}else{
@@ -198,7 +229,7 @@ if (process.argv[2]){
 			}
 			break;
 		}
-		default:{
+		default: {
 			console.log("*** Missed Arguments ***");
 			console.log("Execute btgen -h for usage info");
 			console.log("Exiting...");
@@ -208,4 +239,9 @@ if (process.argv[2]){
 	console.log("*** No command found ***");
 	console.log("Execute btgen -h for usage info");
 	console.log("Exiting...");
+}
+
+if (ready) {
+	console.log(`Project ${projectName} is ready!`);
+	console.log(`Just wait to files to be downloaded.`);
 }

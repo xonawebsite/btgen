@@ -7,12 +7,12 @@
     "btgen": "index.js"
   },
   "scripts": {
-    "test:webpage": "node index.js webpage test && rm -r test",
-    "test:bootstrap": "node index.js bootstrap test && rm -r test",
-    "test:webgame": "node index.js webgame test && rm -r test",
-    "test:vuepage": "node index.js vuepage test && rm -r test",
-    "test:reactpage": "node index.js reactpage test && rm -r test",
-    "test:expressapp": "node index.js expressapp test && rm -r test"
+    "test:webpage": "node index.js webpage test && cd test && http-server -c-1 -d -i .",
+    "test:bootstrap": "node index.js bootstrap test && cd test && http-server -c-1 -d -i .",
+    "test:webgame": "node index.js webgame test && cd test && http-server -c-1 -d -i .",
+    "test:vuepage": "node index.js vuepage test && cd test && http-server -c-1 -d -i .",
+    "test:reactpage": "node index.js reactpage test && cd test && http-server -c-1 -d -i .",
+    "test:expressapp": "node index.js expressapp test & cd test &&  http-server -c-1 -d - .t"
   },
   "repository": {
     "type": "git",
