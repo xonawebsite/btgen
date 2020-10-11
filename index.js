@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const help = require('./lib/help.js')
+const help = require('./lib/help')
 const process = require('process')
 const fs = require('fs')
 
@@ -32,7 +32,7 @@ if (process.argv[2]){
 		case "web":
 		case "webpage": {
 			if (process.argv[3]){
-				let webpage = require('./lib/templates/webpage.js');
+				let webpage = require('./lib/templates/webpage');
 				if (options.includes('--help')){
 					if (options.includes('-v')){
 						webpage.help(true);
@@ -62,7 +62,7 @@ if (process.argv[2]){
 		case "bt":
 		case "bootstrap": {
 			if (process.argv[3]){
-				let bootstrap = require('./lib/templates/bootstrap.js');
+				let bootstrap = require('./lib/templates/bootstrap');
 				if (options.includes('--help')){
 					if (options.includes('-v')){
 						bootstrap.help(true);
@@ -92,7 +92,7 @@ if (process.argv[2]){
 		case "game":
 		case "webgame": {
 			if (process.argv[3]){
-				let webgame = require('./lib/templates/webgame.js');
+				let webgame = require('./lib/templates/webgame');
 				if (options.includes('--help')){
 					if (options.includes('-v')){
 						webgame.help(true);
@@ -122,7 +122,7 @@ if (process.argv[2]){
 		case "vue":
 		case "vuepage": {
 			if (process.argv[3]){
-				let vuepage = require('./lib/templates/vuepage.js');
+				let vuepage = require('./lib/templates/vuepage');
 				if (options.includes('--help')){
 					if (options.includes('-v')){
 						vuepage.help(true);
@@ -152,7 +152,7 @@ if (process.argv[2]){
 		case "react":
 		case "reactpage": {
 			if (process.argv[3]){
-				let reactpage = require('./lib/templates/reactpage.js');
+				let reactpage = require('./lib/templates/reactpage');
 				if (options.includes('--help')){
 					if (options.includes('-v')){
 						reactpage.help(true);
@@ -182,7 +182,7 @@ if (process.argv[2]){
 		case "express":
 		case "expressapp": {
 			if (process.argv[3]){
-				let expressApp = require('./lib/templates/expressapp.js');
+				let expressApp = require('./lib/templates/expressapp');
 				if (options.includes('--help')){
 					if (options.includes('-v')){
 						expressApp.help(true);
@@ -204,6 +204,68 @@ if (process.argv[2]){
 				}
 
 				if (expressApp.createFiles(projectName, options)){
+					ready = true;
+				}
+				break;
+			}
+		}
+		case "angular":
+		case "angularjs":
+		case "angularpage": {
+			if (process.argv[3]){
+				let angularpage = require('./lib/templates/angularjspage');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						angularpage.help(true);
+					}else{
+						angularpage.help();
+					}
+					break;
+				}
+				let tree = options.includes('--no-ed') ? 
+					angularpage.filledTree : 
+					angularpage.tree;
+
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Project tree successfully created!`);
+				}else{
+					break;
+				}
+
+				if (angularpage.createFiles(projectName, options)){
+					ready = true;
+				}
+				break;
+			}
+		}
+		case "electron":
+		case "electronjs":
+		case "electronapp": {
+			if (process.argv[3]){
+				let electronapp = require('./lib/templates/electronapp');
+				if (options.includes('--help')){
+					if (options.includes('-v')){
+						electronapp.help(true);
+					}else{
+						electronapp.help();
+					}
+					break;
+				}
+				let tree = options.includes('--no-ed') ? 
+					electronapp.filledTree : 
+					electronapp.tree;
+
+				projectName = process.argv[3];
+				
+				if (createRootFolder(projectName, tree)){
+					console.log(`Project tree successfully created!`);
+				}else{
+					break;
+				}
+
+				if (electronapp.createFiles(projectName, options)){
 					ready = true;
 				}
 				break;
