@@ -1,6 +1,7 @@
 # BTGen v0.1.4
 
 [![NPM version](https://badge.fury.io/js/btgen.png)](https://npmjs.org/package/btgen)
+
 [![NPM](https://nodei.co/npm/btgen.png)](https://nodei.co/npm/btgen/)
 
 The web development boilerplate CLI generator tool.
