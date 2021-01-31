@@ -1,6 +1,6 @@
 # BTGen v0.1.4
 
-![Btgen Logo](logo.png)
+![](https://nodei.co/npm/btgen/)
 
 The web development boilerplate CLI generator tool.
 
