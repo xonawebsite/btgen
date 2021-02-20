@@ -1,0 +1,19 @@
+{
+  "plugins": [],
+  "templates": [
+    {
+      "name": "website",
+      "description": "",
+      "builder": "website",
+      "aliases": ["web"]
+    }
+  ],
+  "custom-templates": [],
+  "depths": [
+    {
+      "name": "jquery",
+      "type": "static",
+      "path": "https://jquery.com/jquery-#{version}.js"
+    }
+  ]
+}

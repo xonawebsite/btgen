@@ -1,19 +1,28 @@
 {
   "name": "btgen",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "The web development boilerplate CLI generator tool.",
-  "main": "index.js",
+  "main": "bin/cli.js",
   "bin": {
-    "btgen": "index.js"
+    "btgen": "./bin/cli.js"
   },
   "scripts": {
-    "test:webpage": "node index.js webpage test && cd test && http-server -c-1 -d -i .",
-    "test:bootstrap": "node index.js bootstrap test && cd test && http-server -c-1 -d -i .",
-    "test:webgame": "node index.js webgame test && cd test && http-server -c-1 -d -i .",
-    "test:vuepage": "node index.js vuepage test && cd test && http-server -c-1 -d -i .",
-    "test:reactpage": "node index.js reactpage test && cd test && http-server -c-1 -d -i .",
-    "test:expressapp": "node index.js expressapp test & cd test &&  http-server -c-1 -d - .t"
+    "test": "mocha",
+    "start": "./bin/cli.js",
+    "doc": "jsdoc ./lib -r -d ./doc",
+    "serve": "http-server ./doc -c-1",
+    "preserve": "npm run doc"
   },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://patreon.com/kenliten"
+    },
+    {
+      "type": "liberapay",
+      "url": "https://liberapay.com/kenliten"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kenliten/btgen.git"
@@ -35,9 +44,27 @@
     "generator"
   ],
   "author": "kenliten",
+  "contributors": [
+    {
+      "name": "Otoniel Reyes",
+      "email": "otonielreyesgalay@gmail.com",
+      "url": "https://otonielreyes.com"
+    }
+  ],
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/kenliten/btgen/issues"
+    "url": "https://github.com/kenliten/btgen/issues",
+    "email": "otonielreyesgalay@gmail.com"
   },
-  "homepage": "https://kenliten.github.io/btgen/"
+  "homepage": "https://kenliten.github.io/btgen/",
+  "man": [
+    "./man/btgen.1",
+    "./man/cli.1"
+  ],
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "http-server": "^0.12.3",
+    "jsdoc": "^3.6.6",
+    "mocha": "^8.3.0"
+  }
 }
