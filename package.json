@@ -1,17 +1,14 @@
 {
   "name": "btgen",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "The web development boilerplate CLI generator tool.",
   "main": "bin/cli.js",
   "bin": {
+    "btg": "./bin/cli.js",
     "btgen": "./bin/cli.js"
   },
   "scripts": {
-    "test": "mocha",
-    "start": "./bin/cli.js",
-    "doc": "jsdoc ./lib -r -d ./doc",
-    "serve": "http-server ./doc -c-1",
-    "preserve": "npm run doc"
+    "start": "./bin/cli.js"
   },
   "funding": [
     {
@@ -56,15 +53,9 @@
     "url": "https://github.com/kenliten/btgen/issues",
     "email": "otonielreyesgalay@gmail.com"
   },
-  "homepage": "https://kenliten.github.io/btgen/",
+  "homepage": "https://btgen.kenliten.website/",
   "man": [
     "./man/btgen.1",
     "./man/cli.1"
-  ],
-  "devDependencies": {
-    "chai": "^4.3.0",
-    "http-server": "^0.12.3",
-    "jsdoc": "^3.6.6",
-    "mocha": "^8.3.0"
-  }
+  ]
 }
