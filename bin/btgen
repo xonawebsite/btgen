@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+'use-strict';
+
+const system = require('../lib/bootstrap');
+
+system.ready = function() {
+  const BTGen = require('../lib/btgen');
+}
+
+system.boot();

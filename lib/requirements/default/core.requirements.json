@@ -1,0 +1,30 @@
+{
+	"minimum": [
+		{
+			"name": "node",
+			"version": ">=10.0.x"
+		},
+		{
+			"name": "npm",
+			"version": ">=5.0.x"
+		},
+		{
+			"name": "npx",
+			"version": ">=5.0.x"
+		}
+	],
+	"recommended": [
+		{
+			"name": "node",
+			"version": ">=14.0.x"
+		},
+		{
+			"name": "npm",
+			"version": ">=7.0.x"
+		},
+		{
+			"name": "npx",
+			"version": ">=7.0.x"
+		}
+	]
+}

@@ -2,13 +2,16 @@
   "name": "btgen",
   "version": "0.2.0",
   "description": "The web development boilerplate CLI generator tool.",
-  "main": "bin/cli.js",
+  "main": "bin/btgen",
   "bin": {
-    "btg": "./bin/cli.js",
-    "btgen": "./bin/cli.js"
+    "btg": "./bin/btgen",
+    "btgen": "./bin/btgen"
   },
   "scripts": {
-    "start": "./bin/cli.js"
+    "start": "./bin/btgen"
+  },
+  "engines":{
+    "node":">=8.0.x"
   },
   "funding": [
     {
@@ -53,9 +56,5 @@
     "url": "https://github.com/kenliten/btgen/issues",
     "email": "otonielreyesgalay@gmail.com"
   },
-  "homepage": "https://btgen.kenliten.website/",
-  "man": [
-    "./man/btgen.1",
-    "./man/cli.1"
-  ]
+  "homepage": "https://btgen.kenliten.website/"
 }
