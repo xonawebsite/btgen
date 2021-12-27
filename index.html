@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>BTGen Official Documentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenliten/nvk/dist/nvk.reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+    <div class="">
+      <nav id="navbar">
+        <header>
+          <img src="./assets/logo.png" id="logo" alt="BTGen Logo">
+          <p>
+            The web development boilerplate CLI generator tool.
+          </p>
+        </header>
+        <a class="nav-link" href="#BTGen">BTGen</a>
+        <a class="nav-link" href="#Install">Install</a>
+        <a class="nav-link" href="#Templates">Templates</a>
+        <a class="nav-link" href="#Webpage">Webpage</a>
+        <a class="nav-link" href="#Bootstrap">Bootstrap</a>
+        <a class="nav-link" href="#Webgame">Webgame</a>
+        <a class="nav-link" href="#Vuepage">Vuepage</a>
+        <a class="nav-link" href="#Reactpage">Reactpage</a>
+        <a class="nav-link" href="#Expressapp">Expressapp</a>
+        <a class="nav-link" href="#Angularpage">Angularpage</a>
+        <a class="nav-link" href="#Electronapp">Electronapp</a>
+        <a class="nav-link" href="#Upcomming">Upcomming</a>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="BTGen">
+          <header>
+            <h1>
+              BTGen
+            </h1>
+          </header>
+          <b>BTGen v0.1.4</b>
+          <p>
+            <q>The web development boilerplate CLI generator tool.</q>
+          </p>
+          <h3>Introduction</h3>
+          <hr>
+          <p>
+            BTGen is a tiny CLI tool to generate a nice starting point for many web development projects, like React, Vue, Express or simple plain HTML.
+          </p>
+          <p>
+            In order to install the tool you'll need <a href="https://nodejs.org/">Node.js</a> and <a href="https://npmjs.com/">npm</a> installed in your machine. If you already have both requirements, let's get started!
+          </p>
+        </section>
+        <section class="main-section" id="Install">
+          <header><h2>Install</h2></header>
+          <p>
+            To install the tool, all you have to do is type the following command in your terminal / cmd / powershell or whatever you use as command line execution.
+            <code>$ <var>npm</var> i -g btgen</code>
+          </p>
+          <p>
+            Of course, you can install it using yarn instead, if you like to.
+            <code>$ <var>yarn</var> global add btgen</code>
+            That's it!
+          </p>
+          <hr>
+          <p>
+            Also you can install it locally following these simple steps:
+          </p>
+          <p>
+            <ol>
+              <li>Clone this repository with: <br><code>$ <var>git</var> clone https://github.com/kenliten/btgen.git</code></li>
+              <li>Go to the project folder: <br><code>$ <var>cd</var> btgen</code></li>
+              <li>Link it to your environment with: <br><code>$ <var>npm</var> link</code></li>
+            </ol>
+          </p>
+          <hr>
+          <p>
+            Another option is run the code without install it in your system:
+          </p>
+          <p>
+            <ol>
+              <li>Clone this repository with: <br><code>$ <var>git</var> clone https://github.com/kenliten/btgen.git</code></li>
+              <li>Go to the project folder: <br><code>$ <var>cd</var> btgen</code></li>
+              <li>Run your commands directly with nodejs: <br><code>$ <var>node</var> index.js &lt;template&gt; &lt;project-name&gt;</code></li>
+            </ol>
+          </p>
+        </section>
+        <section class="main-section" id="Templates">
+          <header><h2>Templates</h2></header>
+          <p>
+            With BTGen, you have available some templates to start working faster, and spend less time creating the project structure.
+          </p>
+          <p>
+            To use a template, the command structure is the following:
+          </p>
+          <code>
+            $ <var>btgen</var> &lt;template-name&gt; &lt;project-name&gt; [options]
+          </code>
+          <p>If you want to create a simple html + css + javascript/jquery webpage, and the project's name is fancy-site, you'll need this command:</p>
+          <code>
+            $ <var>btgen</var> webpage fancy-site
+          </code>
+          <p class="note">
+            BTGen will create the project folder and the content inside, so you don't need to create manually the folder, just run the commands and open your brand new project.
+          </p>
+          <h3 style="padding-left: 16px;">Available Templates</h3>
+          <hr>
+          <p>
+            Those are the available templates right now, you can use and test each one separately.
+          </p>
+          <p>
+            <ul>
+              <li>webpage</li>
+              <li>bootstrap</li>
+              <li>webgame</li>
+              <li>vuepage</li>
+              <li>reactpage</li>
+              <li>expressapp</li>
+              <li>angularpage</li>
+              <li>electronapp</li>
+            </ul>
+          </p>
+          <p class="note">
+            Each template can take several options to change the result boilerplate, to see the available options use this:
+            <br>
+            <code><var>btgen</var> &lt;template-name&gt; --help -v </code>
+          </p>
+        </section>
+        <section class="main-section" id="Webpage">
+          <header><h2>Webpage</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple structured html/css/js page.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> webpage &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>
+                    css/
+                    <ul>
+                      <li>
+                        master.css
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    images/
+                  </li>
+                  <li>
+                    js/
+                    <ul>
+                      <li>
+                        vendor/
+                        <ul>
+                          <li>jquery-3.5.1.min.js</li>
+                        </ul>
+                      </li>
+                      <li>main.js</li>
+                    </ul>
+                  </li>
+                  <li>404.html</li>
+                  <li>humans.txt</li>
+                  <li>index.html</li>
+                  <li>robots.txt</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </section>
+        <section class="main-section" id="Bootstrap">
+          <header><h2>Bootstrap</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple bootstrap featured html5 project.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> bootstrap &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>
+                    css/
+                    <ul>
+                      <li>
+                        vendor/
+                        <ul>
+                          <li>bootstrap.min.css</li>
+                        </ul>
+                      </li>
+                      <li>
+                        master.css
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    images/
+                  </li>
+                  <li>
+                    js/
+                    <ul>
+                      <li>
+                        vendor/
+                        <ul>
+                          <li>bootstrap.min.js</li>
+                          <li>jquery-3.5.1.min.js</li>
+                          <li>popper.min.js</li>
+                        </ul>
+                      </li>
+                      <li>main.js</li>
+                    </ul>
+                  </li>
+                  <li>404.html</li>
+                  <li>humans.txt</li>
+                  <li>index.html</li>
+                  <li>robots.txt</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </section>
+        <section class="main-section" id="Webgame">
+          <header><h2>Webgame</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple HTML5 + JS game featured with a simple game loop and the basic variables to work with.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> webgame &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>
+                    assets/
+                    <ul>
+                      <li>audio/
+                        <ul>
+                          <li>babyIFeelLove.mp3</li>
+                          <li>dreamsOfMyLuck.mp3</li>
+                          <li>happySunset.mp3</li>
+                          <li>heatOfTheWorld.mp3</li>
+                          <li>jumpUp.wav</li>
+                          <li>newKindOfHumanity.mp3</li>
+                          <li>strangerOfYou.mp3</li>
+                          <li>timeForYourLife.mp3</li>
+                        </ul>
+                      </li>
+                      <li>font/</li>
+                      <li>sprites/</li>
+                    </ul>
+                  </li>
+                  <li>
+                    css/
+                    <ul>
+                      <li>
+                        master.css
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    js/
+                    <ul>
+                      <li>vendor/</li>
+                      <li>devTools.js</li>
+                      <li>game.js</li>
+                    </ul>
+                  </li>
+                  <li>GDD.md</li>
+                  <li>humans.txt</li>
+                  <li>index.html</li>
+                  <li>robots.txt</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </section>
+        <section class="main-section" id="Vuepage">
+          <header><h2>Vuepage</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple vue's powered webpage.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> vuepage &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>
+                    css/
+                    <ul>
+                      <li>
+                        master.css
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    images/
+                  </li>
+                  <li>
+                    js/
+                    <ul>
+                      <li>
+                        vendor/
+                        <ul>
+                          <li>jquery-3.5.1.js</li>
+                          <li>jquery-3.5.1.min.js</li>
+                          <li>vue.js</li>
+                          <li>vue.min.js</li>
+                        </ul>
+                      </li>
+                      <li>main.js</li>
+                    </ul>
+                  </li>
+                  <li>404.html</li>
+                  <li>humans.txt</li>
+                  <li>index.html</li>
+                  <li>robots.txt</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </section>
+        <section class="main-section" id="Reactpage">
+          <header><h2>Reactpage</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple react's powered webpage.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> reactpage &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>
+                    css/
+                    <ul>
+                      <li>
+                        master.css
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    images/
+                  </li>
+                  <li>
+                    js/
+                    <ul>
+                      <li>
+                        vendor/
+                        <ul>
+                          <li>jquery-3.5.1.js</li>
+                          <li>jquery-3.5.1.min.js</li>
+                          <li>react.development.js</li>
+                          <li>react.production.min.js</li>
+                          <li>react-dom.development.js</li>
+                          <li>react-dom.production.min.js</li>
+                        </ul>
+                      </li>
+                      <li>main.js</li>
+                    </ul>
+                  </li>
+                  <li>404.html</li>
+                  <li>humans.txt</li>
+                  <li>index.html</li>
+                  <li>robots.txt</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </section>
+        <section class="main-section" id="Expressapp">
+          <header><h2>Expressapp</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple express application.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> expressapp &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>
+                    bin/
+                    <ul>
+                      <li>
+                        www
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    public/
+                    <ul>
+                      <li>
+                        css/
+                        <ul>
+                          <li>vendor/</li>
+                          <li>master.css</li>
+                        </ul>
+                      </li>
+                      <li>images/</li>
+                      <li>
+                        js/
+                        <ul>
+                          <li>
+                            vendor/
+                            <ul>
+                              <li>jquery-3.5.1.min.js</li>
+                              <li>jquery-3.5.1.js</li>
+                            </ul>
+                          </li>
+                          <li>main.js</li>
+                        </ul>
+                        <li>humans.txt</li>
+                        <li>robots.txt</li>
+                      </li>
+                    </ul>
+                    <li>
+                      routes/
+                      <ul>
+                        <li>index.js</li>
+                        <li>users.js</li>
+                      </ul>
+                    </li>
+                    <li>
+                      views/
+                      <ul>
+                        <li>error.ejs</li>
+                        <li>index.ejs</li>
+                      </ul>
+                    </li>
+                  </li>
+                  <li>app.js</li>
+                  <li>package.json</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </section>
+
+        <section class="main-section" id="Angularpage">
+          <header><h2>Angularpage</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple webpage with angularJS with 1.8.x.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> angularpage &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>
+                    css/
+                    <ul>
+                      <li>vendor
+                        <ul>
+                          <li>nvk.reset.min.css</li>
+                        </ul>
+                      </li>
+                      <li>
+                        master.css
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    images/
+                  </li>
+                  <li>
+                    js/
+                    <ul>
+                      <li>
+                        vendor/
+                        <ul>
+                          <li>angular.js</li>
+                          <li>angular.min.js</li>
+                          <li>jquery-3.5.1.js</li>
+                          <li>jquery-3.5.1.min.js</li>
+                        </ul>
+                      </li>
+                      <li>main.js</li>
+                    </ul>
+                  </li>
+                  <li>404.html</li>
+                  <li>humans.txt</li>
+                  <li>index.html</li>
+                  <li>robots.txt</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+        </section>
+        
+        <section class="main-section" id="Electronapp">
+          <header><h2>Electronapp</h2></header>
+          <h4>Description</h4>
+          <p>
+            Create a simple yet fully customizable electron application.
+          </p>
+          <hr>
+          <h4>Command structure</h4>
+          <code>
+            $ <var>btgen</var> electronapp &lt;project-name&gt; [options]
+          </code>
+          <hr>
+          <h4>Project folder structure</h4>
+          <p>
+            <ul class="folder-structure">
+              <li>
+                &lt;project-name&gt;
+                <ul>
+                  <li>app/
+                    <ul>
+                      <li>assets/
+                        <ul>
+                          <li>audio/</li>
+                          <li>fonts/</li>
+                          <li>graphics/</li>
+                          <li>json/</li>
+                        </ul>
+                      </li>
+                      <li>lib/
+                        <ul>
+                          <li>vendor/
+                            <ul>
+                              <li>pouchdb.js</li>
+                              <li>pouchdb-7.2.1.min.js</li>
+                            </ul>
+                          </li>
+                          <li>helper.js</li>
+                        </ul>
+                      </li>
+                      <li>scripts/
+                        <ul>
+                          <li>vendor/
+                            <ul>
+                              <li>jquery-3.5.1.min.js</li>
+                            </ul>
+                          </li>
+                          <li>behavior.js</li>
+                        </ul>
+                      </li>
+                      <li>styles/
+                        <ul>
+                          <li>vendor/
+                            <ul>
+                              <li>nvk.reset.min.js</li>
+                            </ul>
+                          </li>
+                          <li>master.js</li>
+                        </ul>
+                      </li>
+                      <li>index.html</li>
+                      <li>index.js</li>
+                    </ul>
+                    <li>build/</li>
+                    <li>package.json</li>
+                  </li>
+                </ul>
+            </ul>
+          </p>
+        </section>
+
+        <section class="main-section" id="Upcomming">
+          <header><h2>Upcomming</h2></header>
+          <p>
+            For the next versions, will be implemented the following templates:
+          </p>
+          <h4>Nodemvc</h4>
+          <hr>
+          <p>
+            Node.js (Express + MongoDB) Model View Controller Application template.
+          </p>
+          <h4>Mevn</h4>
+          <hr>
+          <p>
+            Fullstack application with MongoDB, Express, Vue, and Node.js.
+          </p>
+          <h4>Mern</h4>
+          <hr>
+          <p>
+            Fullstack application with MongoDB, Express, React and Node.js.
+          </p>
+          <h4>Mean</h4>
+          <hr>
+          <p>
+            Fullstack application with MongoDB, Express, Angular and Node.js.
+          </p>
+          <h4>Vueapp</h4>
+          <hr>
+          <p>
+            Vue.js Model View Controller application.
+          </p>
+          <h4>Vuespa</h4>
+          <hr>
+          <p>
+            Vue.js Model View Controller Single Page Application.
+          </p>
+          <h4>Phppage</h4>
+          <hr>
+          <p>
+            Simple php webpage
+          </p>
+          <h4>Phpapp</h4>
+          <hr>
+          <p>
+            Simple Model View Controller php + MySql app with auth system and backend GUI.
+          </p>
+          <h4>Chrext</h4>
+          <hr>
+          <p>
+            A simple multipurpose Chrome Extension boilerplate.
+          </p>
+          <h4>Firext</h4>
+          <hr>
+          <p>
+            A simple multipurpose Firefox Extension boilerplate.
+          </p>
+          <h4>Reactapp</h4>
+          <hr>
+          <p>
+            React.js Model View Controller application.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script  src="js/index.js"></script>
+  </body>
+</html>
